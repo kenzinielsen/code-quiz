@@ -1,5 +1,6 @@
 header {
     text-align: center;
+    padding-top: 40px;
 }
 header h1 {
     font-size: 38px;
@@ -9,18 +10,16 @@ header p {
 }
 .btn {
     border: none;
-background-color: rgba(101, 63, 151, 0.993);
-border-radius: 25px;
-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1
-  0px;
-color: hsl(0, 0%, 100%);
-display: inline-block;
-font-size: 22px;
-line-height: 22px;
-margin: 16px 16px 16px 20px;
-padding: 14px 34px;
-text-align: center;
-cursor: pointer;
+    background-color: rgba(101, 63, 151, 0.993);
+    border-radius: 25px;
+    color: hsl(0, 0%, 100%);
+    display: inline-block;
+    font-size: 22px;
+    line-height: 22px;
+    margin: 16px 16px 16px 20px;
+    padding: 14px 34px;
+    text-align: center;
+    cursor: pointer;
 }
 .btn:hover {
     background-color: rgb(72, 194, 194);
@@ -28,7 +27,40 @@ cursor: pointer;
 .disappear {
     display:none;
 }
-#questions {
-    color:rgba(101, 63, 151, 0.993);
+
+h2 {
+    font-size: 38px;
+    margin: 60px 20px 25px 20px;
+    padding: 14px 34px;
+    text-align: center;
+}
+.answers {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
 }
 
+.answers button{
+    
+    border: none;
+    background-color: rgba(101, 63, 151, 0.993);
+    border-radius: 25px;
+    color: hsl(0, 0%, 100%);
+    display: table-column;
+    font-size: 22px;
+    line-height: 22px;
+    margin: 35px 16px 16px 20px;
+    padding: 14px 34px;
+    cursor: pointer;
+}
+
+.answers button:hover {
+
+    background-color: rgb(72, 194, 194);
+}
+
+.timerEl {
+    font-size: 22px;
+}
