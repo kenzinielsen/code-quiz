@@ -1,7 +1,7 @@
 # code-quiz
 
 ## Purpose
-A javascript fundamentals quiz to test your knowledge! 
+A fun quiz to test your knoweledge on JavaScript fundamental's! 
 
 ## Built With
 * HTML

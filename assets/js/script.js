@@ -1,11 +1,11 @@
-var quizOpen = document.querySelector (".quizOpen");
-var start = document.getElementById ("start");
+var quizOpen = document.querySelector(".quizOpen");
+var start = document.getElementById("start");
 var questionEl = document.querySelector(".questionEl");
 var index = 0;
 var answers = document.querySelector(".answers");
 var time = 60;
 var timerId;
-var highScore;
+var highScores = document.querySelector(".highScores");
 var timerEl = document.querySelector(".timerEl");
 
 var scores = [];
@@ -17,7 +17,7 @@ var questions = [
         correct: "||",
     },
     {
-        question: "Which of the following variables is visible everywhere in your javascript code?", 
+        question: "Which of the following variables is visible everywhere in your JavaScript code?", 
         answers: ["Global Variable", "Local Variable", "Both ", "None of the above" ],
         correct: "Global Variable",
     },
@@ -27,7 +27,7 @@ var questions = [
         correct: "function beginQuiz( ) { }",
     },
     {
-        question: "What does [ ] do in javascript?", 
+        question: "What does [ ] do in JavaScript?", 
         answers: ["Creates an empty object", "Can be used to create a function", "Creates an empty array", "All of the above" ],
         correct: "Creates an empty array",
     },
@@ -56,6 +56,7 @@ function timer() {
     if(time<1) {
         endQuiz();
     }
+    scores();
 }
 
 function getQuestion() {
@@ -84,15 +85,23 @@ function getAnswer() {
     }
 }
 
-function highScore() {
+function highScores() {
+    if (endQuiz()) {
+        scores.setAttribute("click", "scores");
 
+    }
 }
 
-//var saveScores = function() {
-//    localStorage.setItem("scores", JSON.stringify (scores));
-//}
-//function displayHighScore() {
-//    localStorage.getItem("score", JSON.parse(score))
-//}
+var scores = function() {
+    localStorage.setItem("scores", JSON.stringify(scores));
+    //localStorage.getItem("scores", JSON.parse(scores));
+
+}
+//unction scores() {
+//   localStorage.setItem("scores", JSON.stringify (scores));
 //
+///function displayHighScore() {
+  //  localStorage.getItem("scores", JSON.parse(scores))
+//}
+
 start.addEventListener("click", startQuiz);
