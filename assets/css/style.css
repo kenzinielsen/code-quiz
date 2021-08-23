@@ -2,12 +2,15 @@ header {
     text-align: center;
     padding-top: 40px;
 }
+
 header h1 {
     font-size: 38px;
 }
+
 header p {
     font-size: 22px;
 }
+
 .btn {
     border: none;
     background-color: rgba(101, 63, 151, 0.993);
@@ -21,9 +24,11 @@ header p {
     text-align: center;
     cursor: pointer;
 }
+
 .btn:hover {
     background-color: rgb(72, 194, 194);
 }
+
 .disappear {
     display:none;
 }
@@ -34,6 +39,7 @@ h2 {
     padding: 14px 34px;
     text-align: center;
 }
+
 .answers {
     display: flex;
     justify-content: flex-start;
@@ -62,5 +68,5 @@ h2 {
 }
 
 .timerEl {
-    font-size: 22px;
+    font-size: 28px;
 }
