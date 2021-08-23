@@ -70,6 +70,7 @@ function getQuestion() {
         button.onclick=getAnswer;
         answers.append(button);
     }
+    scores();
 }
 
 function getAnswer() {
@@ -86,22 +87,16 @@ function getAnswer() {
 }
 
 function highScores() {
-    if (endQuiz()) {
-        scores.setAttribute("click", "scores");
-
+        var button = document.createElement("button");
+    
+    
+    button.onclick=scores;
+    highScores.append(button);
     }
-}
 
 var scores = function() {
     localStorage.setItem("scores", JSON.stringify(scores));
     //localStorage.getItem("scores", JSON.parse(scores));
-
 }
-//unction scores() {
-//   localStorage.setItem("scores", JSON.stringify (scores));
-//
-///function displayHighScore() {
-  //  localStorage.getItem("scores", JSON.parse(scores))
-//}
 
 start.addEventListener("click", startQuiz);
